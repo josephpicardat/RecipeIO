@@ -1,6 +1,8 @@
 # RecipeIO
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  [![Bugs](https://img.shields.io/github/issues/Lawhornmatt/RecipeIO/bug.svg)](https://github.com/Lawhornmatt/RecipeIO/issues)
+
+## Overview
+
+RecipeIO is a full-stack web application developed by the House of Stark team to provide a platform where users can create, share, and organize their favorite recipes. This project was built as part of a group collaboration showcasing full-stack development skills. Users can log in, create recipe books, add recipes, and explore the community’s culinary creations.
 
 ## TABLE OF CONTENTS:
 
@@ -74,6 +76,9 @@ This project was made through the contributions of:
 <a name="license"></a>
 
 ## LICENSE:
+
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![Bugs](https://img.shields.io/github/issues/Lawhornmatt/RecipeIO/bug.svg)](https://github.com/Lawhornmatt/RecipeIO/issues)
 
 This program is copyrighted under the MIT open source license.
 
