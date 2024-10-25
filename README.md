@@ -26,7 +26,7 @@ To use RecipeIO, you can run the project locally by following the instructions b
 - Node.js: Make sure Node.js is installed. Download it from nodejs.org.
 - MongoDB: Ensure you have MongoDB installed or access to a MongoDB instance.
 
-###Installation
+### Installation
 
 1. **Clone the repository:**
 
@@ -43,30 +43,30 @@ To use RecipeIO, you can run the project locally by following the instructions b
 3. **Set up environment variables:**
 Create a .env file in the root directory and configure the following:
 
-```bash
-MONGO_URI=<your_mongo_db_uri>
-SESSION_SECRET=<your_session_secret>
-```
+    ```bash
+    MONGO_URI=<your_mongo_db_uri>
+    SESSION_SECRET=<your_session_secret>
+    ```
 
 4.	**Start the development server:**
-```bash
-npm start
-```
+    ```bash
+    npm start
+    ```
 
 5.	**Visit the app locally:**
-Open your browser and navigate to http://localhost:3000.
+    Open your browser and navigate to http://localhost:3000.
 
 
-##Usage
+## Usage
 
-###Once logged in, users can:
+### Once logged in, users can:
 
 1.	Create and Organize Recipes: Add recipes, input ingredients, provide instructions, and categorize them into books.
 2.	Browse Recipes: View recipes created by other users or explore random selections.
 3.	Manage Recipe Books: Create and organize personal recipe collections.
 4.	Visual Feedback: Enjoy a smooth and responsive user experience across all devices.
 
-###How to Create a Recipe
+### How to Create a Recipe
 
 1.	Log in or sign up to access the main dashboard.
 2.	Navigate to the recipe creation page from the navbar.
@@ -74,7 +74,7 @@ Open your browser and navigate to http://localhost:3000.
 4.	Assign the recipe to a book (if none exist, create a new book first).
 5.	Submit the form to add the recipe to your collection.
 
-##Technologies
+## Technologies
 
 -	Frontend: HTML, CSS, JavaScript, Handlebars.js
 -	Backend: Node.js, Express.js
