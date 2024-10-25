@@ -10,10 +10,6 @@
 
 * [Usage Info](#usage) 
 
-* [Contribution Guidelines](#contribution) 
-
-* [Testing Instructions](#testing) 
-
 * [Questions](#questions)
 
 * [Credits](#credit)
@@ -43,18 +39,6 @@ Visit it on Heroku to try it out! <a target="_blank" rel="noopener noreferrer" h
 Upon visiting our website, unless logged in already, you will be taken to the log in page. Here you can log in or create a new account. Once logged in, you'll be taken to the homepage. This page features a random recipe from our community of chefs to check out. From the nav bar at the top, one can see their account, read more about the site and our team, view their recipe books or make new ones, view all their recipes, and make new recipes. 
 
 To make a new recipe, choose it's name, its ingredients, its instructions, and input a URL to a picture of the dish. One must assign it at least one book from the checkboxes! If there are no checkboxes, click on 'new books' and make a new one before making a new recipe.
-
-<a name="contribution"></a>
-
-## CONTRIBUTION:
-
-Sorry, this project is privately maintained.
-
-<a name="testing"></a>
-
-## TESTING:
-
-Thank you, but no testing is needed at this time.
 
 <a name="questions"></a>
 
