@@ -81,6 +81,147 @@ Create a .env file in the root directory and configure the following:
 -	Database: MongoDB
 -	Authentication: Passport.js for user authentication
 
+## Technologies in Detail
+
+This project uses various technologies, and here’s what each does:
+
+- Express.js: Provides a set of features for web and mobile applications. It’s used here to manage routes (e.g., GET, POST, DELETE) for books, users, and recipes.
+- Sequelize: A promise-based Node.js ORM (Object-Relational Mapping) tool that supports various SQL-based databases. It is used here to manage database operations such as querying for books, recipes, and user information.
+- Bcrypt.js: A password hashing library used to securely hash passwords in the user model and verify them during authentication.
+
+### API Documentation for Book Routes
+
+The Book Routes controller handles CRUD operations related to cookbooks (books) created by users. Below is a summary of the available routes.
+
+####GET /books/
+
+Description: Retrieve all cookbooks associated with the authenticated user.
+
+- Request Type: GET
+- Authentication: Required (withAuth middleware)
+- Response: Renders the books template with a list of all cookbooks that the user has created.
+- Error Handling: If there’s an error, it returns a status 500 with the error message.
+
+Example Response:
+```bash
+{
+  "bookData": [
+    {
+      "id": 1,
+      "name": "Italian Recipes",
+      "user_id": 3
+    },
+    {
+      "id": 2,
+      "name": "Vegan Recipes",
+      "user_id": 3
+    }
+  ],
+  "logged_in": true
+}
+```
+
+#### GET /books/newbook
+
+Description: Displays a form for creating a new cookbook.
+
+- Request Type: GET
+- Authentication: Required (withAuth middleware)
+- Response: Renders the newBook template.
+- Error Handling: If there’s an error, it returns a status 500.
+
+#### POST /books/makenewbook
+
+Description: Creates a new cookbook associated with the authenticated user.
+
+- Request Type: POST
+- Authentication: Required (withAuth middleware)
+- Body Parameters:
+    - name (string): The name of the new cookbook.
+- Response: Redirects to the /books route after the book is created. Logs a success message in the console.
+- Error Handling: If the book creation fails, it returns a status 400.
+
+Example Success Log:
+```bash
+status: 'ok', message: Italian Recipes is created!
+```
+
+### User Model
+
+The User model represents users in the system, and it includes fields for user credentials, authentication hooks for password hashing, and password validation.
+
+Model Definition
+```bash
+User.init({
+    id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+    },
+    first_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    last_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    username: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+        validate: {
+            isEmail: true,
+        },
+    },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            len: [4],
+        },
+    },
+}, {
+    hooks: {
+        beforeCreate: async(newUserData) => {
+            newUserData.password = await bcrypt.hash(newUserData.password, 10);
+            return newUserData;
+        },
+        beforeUpdate: async(updatedUserData) => {
+            updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+            return updatedUserData;
+        },
+    },
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'user',
+});
+```
+#### Model Fields:
+
+- id: Primary key, auto-incremented.
+- first_name: User’s first name, required.
+- last_name: User’s last name, required.
+- username: Unique username, required.
+- email: Must be a valid and unique email address, required.
+- password: A hashed password, with a minimum length of 4 characters.
+
+#### Hooks:
+
+- beforeCreate: Automatically hashes the user’s password before storing it in the database.
+- beforeUpdate: Hashes the password before an update if the password has changed.
+
+#### Methods:
+
+- checkPassword: A custom method for comparing a user’s login password to the hashed password in the database.
+
 ## QUESTIONS:
 
 If you have any questions,
