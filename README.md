@@ -4,53 +4,88 @@
 
 RecipeIO is a full-stack web application developed by the House of Stark team to provide a platform where users can create, share, and organize their favorite recipes. This project was built as part of a group collaboration showcasing full-stack development skills. Users can log in, create recipe books, add recipes, and explore the community’s culinary creations.
 
-## TABLE OF CONTENTS:
-
-* [Description](#description)
-
-* [Installation guide](#installation) 
-
-* [Usage Info](#usage) 
-
-* [Questions](#questions)
-
-* [Credits](#credit)
-
-* [License](#license)
-
-<a name="description"></a>
-
-## DESCRIPTION:
-
-This is the ReadMe for House of Stark's project titled: RecipeIO
-
-This is a group project showcasing our knowledge of full-stack development
-
 <img src='./public/images/6-10-22_RIOscreenshot.png' alt='A screenshot of the homepage of House of Starks Project 2: RecipeIO'/>
 
-<a name="installation"></a>
 
-## INSTALLATION:
+## Features
+
+- User Authentication: Users can sign up, log in, and manage their profiles.
+- Recipe Management: Create, view, and manage personal recipes and recipe books.
+- Community Recipes: Browse random recipes contributed by other users.
+- Interactive UI: Responsive navigation with easy-to-use forms for recipe and book creation.
+
+
+##Getting Started
 
 Visit it on Heroku to try it out! <a target="_blank" rel="noopener noreferrer" href="https://recipeio-project2.herokuapp.com/login">Check it out here!</a>
 
-<a name="usage"></a>
+To use RecipeIO, you can run the project locally by following the instructions below.
 
-## USAGE:
+### Prerequisites
 
-Upon visiting our website, unless logged in already, you will be taken to the log in page. Here you can log in or create a new account. Once logged in, you'll be taken to the homepage. This page features a random recipe from our community of chefs to check out. From the nav bar at the top, one can see their account, read more about the site and our team, view their recipe books or make new ones, view all their recipes, and make new recipes. 
+- Node.js: Make sure Node.js is installed. Download it from nodejs.org.
+- MongoDB: Ensure you have MongoDB installed or access to a MongoDB instance.
 
-To make a new recipe, choose it's name, its ingredients, its instructions, and input a URL to a picture of the dish. One must assign it at least one book from the checkboxes! If there are no checkboxes, click on 'new books' and make a new one before making a new recipe.
+###Installation
 
-<a name="questions"></a>
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/your-username/sorting_algorithm_visualizer.git
+    cd sorting_algorithm_visualizer
+    ```
+
+2. **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+3. **Set up environment variables:**
+Create a .env file in the root directory and configure the following:
+
+```bash
+MONGO_URI=<your_mongo_db_uri>
+SESSION_SECRET=<your_session_secret>
+```
+
+4.	**Start the development server:**
+```bash
+npm start
+```
+
+5.	**Visit the app locally:**
+Open your browser and navigate to http://localhost:3000.
+
+
+##Usage
+
+###Once logged in, users can:
+
+1.	Create and Organize Recipes: Add recipes, input ingredients, provide instructions, and categorize them into books.
+2.	Browse Recipes: View recipes created by other users or explore random selections.
+3.	Manage Recipe Books: Create and organize personal recipe collections.
+4.	Visual Feedback: Enjoy a smooth and responsive user experience across all devices.
+
+###How to Create a Recipe
+
+1.	Log in or sign up to access the main dashboard.
+2.	Navigate to the recipe creation page from the navbar.
+3.	Fill out the form with the recipe name, ingredients, instructions, and an optional image URL.
+4.	Assign the recipe to a book (if none exist, create a new book first).
+5.	Submit the form to add the recipe to your collection.
+
+##Technologies
+
+-	Frontend: HTML, CSS, JavaScript, Handlebars.js
+-	Backend: Node.js, Express.js
+-	Database: MongoDB
+-	Authentication: Passport.js for user authentication
 
 ## QUESTIONS:
 
 If you have any questions,
 
-you can contact me <a target="_blank" rel="noopener noreferrer" href="https://github.com/Lawhornmatt">at my GitHub</a> or email me here: fake@notreal.com
-
-<a name="credit"></a>
+you can contact me via a message on LinkedIn at [josephpicardat](https://www.linkedin.com/in/josephpicardat/)
 
 ## CREDIT:
 
@@ -73,7 +108,6 @@ This project was made through the contributions of:
 
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/Thomasple13">Thomas Le</a>
 
-<a name="license"></a>
 
 ## LICENSE:
 
