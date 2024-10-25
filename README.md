@@ -52,7 +52,7 @@ Create a .env file in the root directory and configure the following:
     ```
 
 5.	**Visit the app locally:**
-    Open your browser and navigate to http://localhost:3000.
+    Open your browser and navigate to http://localhost:3001.
 
 
 ## Usage
