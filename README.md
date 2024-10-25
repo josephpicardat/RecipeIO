@@ -15,7 +15,7 @@ RecipeIO is a full-stack web application developed by the House of Stark team to
 - Interactive UI: Responsive navigation with easy-to-use forms for recipe and book creation.
 
 
-##Getting Started
+## Getting Started
 
 Visit it on Heroku to try it out! <a target="_blank" rel="noopener noreferrer" href="https://recipeio-project2.herokuapp.com/login">Check it out here!</a>
 
