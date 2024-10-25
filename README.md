@@ -93,7 +93,7 @@ This project uses various technologies, and here’s what each does:
 
 The Book Routes controller handles CRUD operations related to cookbooks (books) created by users. Below is a summary of the available routes.
 
-####GET /books/
+#### GET /books/
 
 Description: Retrieve all cookbooks associated with the authenticated user.
 
